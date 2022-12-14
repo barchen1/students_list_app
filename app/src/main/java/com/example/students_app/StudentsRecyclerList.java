@@ -37,6 +37,13 @@ public class StudentsRecyclerList extends AppCompatActivity {
         adapter = new StudentRecyclerAdapter();
         list.setAdapter(adapter);
 
+        add=findViewById(R.id.studentRecycler_add_btn);
+
+        add.setOnClickListener(view->{
+            Intent addStudentIntent = new Intent(this,StudentAddActivity.class);
+            startActivity(addStudentIntent);
+
+        });
         adapter.setOnItemClickListener((int pos)-> {
             Intent intent = new Intent(this,StudentDetailsActivity.class);
             intent.putExtra("pos",pos);
