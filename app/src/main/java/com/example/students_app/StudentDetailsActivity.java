@@ -6,7 +6,6 @@ import android.os.Bundle;
 
 import androidx.annotation.Nullable;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.widget.Button;
 import android.widget.CheckBox;

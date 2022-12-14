@@ -2,7 +2,6 @@ package com.example.students_app;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -19,7 +18,6 @@ public class StudentAddActivity extends AppCompatActivity {
     CheckBox cb;
     Button cancel, save;
 
-    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
