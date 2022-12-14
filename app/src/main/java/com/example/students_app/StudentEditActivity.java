@@ -15,10 +15,10 @@ import com.example.students_app.model.Student;
 import java.util.List;
 
 public class StudentEditActivity extends AppCompatActivity {
-    List<Student> data = Model.instance().getAllStudents();
+    List<Student> studentList = Model.instance().getAllStudents();
     EditText name, id, phone, address;
     CheckBox cb;
-    Button cancel,save,delete;
+    Button cancel, save, delete;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,15 +28,15 @@ public class StudentEditActivity extends AppCompatActivity {
         Intent thisI = getIntent();
         int pos = (int)thisI.getSerializableExtra("pos");
 
-        Student st = data.get(pos);
+        Student st = studentList.get(pos);
         name = findViewById(R.id.student_edit_Pt_name);
         id = findViewById(R.id.student_edit_Pt_id);
-        phone=findViewById(R.id.student_edit_Pt_phone);
-        address=findViewById(R.id.student_edit_Pt_address);
+        phone = findViewById(R.id.student_edit_Pt_phone);
+        address = findViewById(R.id.student_edit_Pt_address);
         cb = findViewById(R.id.student_edit_cb);
-        cancel=findViewById(R.id.student_edit_cancel_btn);
-        delete=findViewById(R.id.student_edit_delete_btn);
-        save=findViewById(R.id.student_edit_save_btn);
+        cancel = findViewById(R.id.student_edit_cancel_btn);
+        delete = findViewById(R.id.student_edit_delete_btn);
+        save = findViewById(R.id.student_edit_save_btn);
 
         this.bind(st);
 
@@ -68,11 +68,11 @@ public class StudentEditActivity extends AppCompatActivity {
     }
 
     private void bindBack( int pos) {
-        data.get(pos).setName(name.getText().toString());
-        data.get(pos).setId(id.getText().toString());
-        data.get(pos).setPhone(phone.getText().toString());
-        data.get(pos).setAddress(address.getText().toString());
-        data.get(pos).setCb(cb.isChecked());
+        studentList.get(pos).setName(name.getText().toString());
+        studentList.get(pos).setId(id.getText().toString());
+        studentList.get(pos).setPhone(phone.getText().toString());
+        studentList.get(pos).setAddress(address.getText().toString());
+        studentList.get(pos).setCb(cb.isChecked());
     }
 
     public void bind(Student st) {
