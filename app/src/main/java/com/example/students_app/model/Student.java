@@ -5,6 +5,8 @@ public class Student {
     private String id;
     private String avatar_url;
     private Boolean cb;
+    private String phone;
+    private String address;
 
     public String getPhone() {
         return phone;
@@ -22,16 +24,19 @@ public class Student {
         this.address = address;
     }
 
-    public String phone;
-    public String address;
-
+    public Student(String name, String id, Boolean cb, String  phone, String address) {
+        this.name = name;
+        this.id = id;
+        this.cb = cb;
+        this.phone = phone;
+        this.address = address;
+    }
     public Student(String name, String id, String avatar_url, Boolean cb) {
         this.name = name;
         this.id = id;
         this.avatar_url = avatar_url;
         this.cb = cb;
     }
-
     public String getName() {
         return name;
     }
