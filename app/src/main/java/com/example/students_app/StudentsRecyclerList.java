@@ -60,14 +60,14 @@ public class StudentsRecyclerList extends AppCompatActivity {
         adapter.notifyDataSetChanged();
     }
     class StudentViewHolder extends RecyclerView.ViewHolder{
-        TextView nameTv;
-        TextView idTv;
+        TextView name;
+        TextView id;
         CheckBox cb;
         public StudentViewHolder(@NonNull View itemView, OnItemClickListener listener){
             super(itemView);
 
-            nameTv = itemView.findViewById(R.id.student_name);
-            idTv = itemView.findViewById(R.id.student_id);
+            name = itemView.findViewById(R.id.student_name);
+            id = itemView.findViewById(R.id.student_id);
             cb = itemView.findViewById(R.id.checkBox);
             cb.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -87,8 +87,8 @@ public class StudentsRecyclerList extends AppCompatActivity {
             });
         }
         public void bind(Student st, int pos){
-            nameTv.setText(st.getName());
-            idTv.setText(st.getId());
+            name.setText(st.getName());
+            id.setText(st.getId());
             cb.setChecked(st.getCb());
             cb.setTag(pos);
         }

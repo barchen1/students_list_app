@@ -20,13 +20,13 @@ import java.util.List;
 public class StudentDetailsActivity extends AppCompatActivity {
 
     List<Student> studentList = Model.instance().getAllStudents();
-    TextView nameTv, idTv, phoneTv, addressTv;
+    TextView name, id, phone, address;
     CheckBox cb;
     Button back, edit;
     Intent thisI;
     int pos;
     Student st;
-    Intent editInent;
+    Intent editIntent;
     int REQUEST_CODE=1;
 
     @Override
@@ -38,19 +38,19 @@ public class StudentDetailsActivity extends AppCompatActivity {
         thisI = getIntent();
         pos = (int)thisI.getSerializableExtra("pos");
         st = studentList.get(pos);
-        nameTv = findViewById(R.id.student_details_st_name);
-        idTv = findViewById(R.id.student_details_st_ID);
-        phoneTv=findViewById(R.id.student_details_st_phone);
-        addressTv=findViewById(R.id.student_details_st_address);
+        name = findViewById(R.id.student_details_st_name);
+        id = findViewById(R.id.student_details_st_ID);
+        phone=findViewById(R.id.student_details_st_phone);
+        address=findViewById(R.id.student_details_st_address);
         cb = findViewById(R.id.student_details_cb);
         back=findViewById(R.id.student_details_back_btn);
         edit=findViewById(R.id.student_details_edit_btn);
 
         this.bind(st);
         edit.setOnClickListener(view -> {
-            editInent = new Intent(this, StudentEditActivity.class);
-            editInent.putExtra("pos",pos);
-            startActivityForResult(editInent,REQUEST_CODE);
+            editIntent = new Intent(this, StudentEditActivity.class);
+            editIntent.putExtra("pos",pos);
+            startActivityForResult(editIntent,REQUEST_CODE);
 
         });
         back.setOnClickListener(view -> finish());
@@ -68,10 +68,10 @@ public class StudentDetailsActivity extends AppCompatActivity {
     }
 
     public void bind(Student st) {
-        nameTv.setText(st.getName());
-        idTv.setText(st.getId());
-        phoneTv.setText(st.getPhone());
-        addressTv.setText(st.getAddress());
+        name.setText(st.getName());
+        id.setText(st.getId());
+        phone.setText(st.getPhone());
+        address.setText(st.getAddress());
         cb.setChecked(st.getCb());
 
     }
