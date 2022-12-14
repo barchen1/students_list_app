@@ -19,7 +19,7 @@
     app:layout_constraintTop_toTopOf="parent" />
 
 <TextView
-    android:id="@+id/student_details_tv_name"
+    android:id="@+id/student_details_name"
     android:layout_width="70dp"
     android:layout_height="40dp"
     android:layout_marginStart="56dp"
@@ -31,7 +31,7 @@
     tools:ignore="MissingConstraints" />
 
 <TextView
-    android:id="@+id/student_details_tv_ID"
+    android:id="@+id/student_details_ID"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_marginStart="56dp"
@@ -39,10 +39,10 @@
     android:text="ID:"
     android:textSize="24sp"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/student_details_tv_name" />
+    app:layout_constraintTop_toBottomOf="@+id/student_details_name" />
 
 <TextView
-    android:id="@+id/student_details_tv_phone"
+    android:id="@+id/student_details_phone"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_marginStart="56dp"
@@ -50,10 +50,10 @@
     android:text="Phone:"
     android:textSize="24sp"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/student_details_tv_ID" />
+    app:layout_constraintTop_toBottomOf="@+id/student_details_ID" />
 
 <TextView
-    android:id="@+id/student_details_tv_address"
+    android:id="@+id/student_details_address"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_marginStart="56dp"
@@ -61,7 +61,7 @@
     android:text="Address: "
     android:textSize="24sp"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/student_details_tv_phone" />
+    app:layout_constraintTop_toBottomOf="@+id/student_details_phone" />
 
 <Button
     android:id="@+id/student_details_back_btn"
@@ -104,7 +104,7 @@
     app:layout_constraintTop_toBottomOf="@+id/student_details_st_imageview" />
 
 <TextView
-    android:id="@+id/student_details_tv_st_name"
+    android:id="@+id/student_details_st_name"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_marginStart="120dp"
@@ -116,7 +116,7 @@
     app:layout_constraintTop_toBottomOf="@+id/student_details_st_imageview" />
 
 <TextView
-    android:id="@+id/student_details_tv_st_ID"
+    android:id="@+id/student_details_st_ID"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_marginStart="120dp"
@@ -125,10 +125,10 @@
     android:textSize="20sp"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/student_details_tv_st_name" />
+    app:layout_constraintTop_toBottomOf="@+id/student_details_st_name" />
 
 <TextView
-    android:id="@+id/student_details_tv_st_phone"
+    android:id="@+id/student_details_st_phone"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_marginStart="120dp"
@@ -137,10 +137,10 @@
     android:textSize="20sp"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/student_details_tv_st_ID" />
+    app:layout_constraintTop_toBottomOf="@+id/student_details_st_ID" />
 
 <TextView
-    android:id="@+id/student_details_tv_st_address"
+    android:id="@+id/student_details_st_address"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_marginStart="120dp"
@@ -149,6 +149,6 @@
     android:textSize="20sp"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/student_details_tv_st_phone" />
+    app:layout_constraintTop_toBottomOf="@+id/student_details_st_phone" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

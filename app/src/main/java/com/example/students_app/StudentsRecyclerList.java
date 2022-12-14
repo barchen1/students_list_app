@@ -22,6 +22,7 @@ import java.util.List;
 public class StudentsRecyclerList extends AppCompatActivity {
     List<Student> studentsList;
     Button add;
+    StudentRecyclerAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,11 +34,10 @@ public class StudentsRecyclerList extends AppCompatActivity {
         list.setHasFixedSize(true);
 
         list.setLayoutManager(new LinearLayoutManager(this));
-        StudentRecyclerAdapter adapter = new StudentRecyclerAdapter();
+        adapter = new StudentRecyclerAdapter();
         list.setAdapter(adapter);
 
         adapter.setOnItemClickListener((int pos)-> {
-            //Log.d("TAG", "Row was clicked " + pos);
             Intent intent = new Intent(this,StudentDetailsActivity.class);
             intent.putExtra("pos",pos);
 
@@ -47,7 +47,11 @@ public class StudentsRecyclerList extends AppCompatActivity {
 
 
     }
-
+    @Override
+    protected void onStart() {
+        super.onStart();
+        adapter.notifyDataSetChanged();
+    }
     class StudentViewHolder extends RecyclerView.ViewHolder{
         TextView nameTv;
         TextView idTv;
@@ -70,7 +74,7 @@ public class StudentsRecyclerList extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
                     int pos = getAdapterPosition();
-//                    Log.d("TAG", "row click " + pos);
+                    Log.d("TAG", "row click " + pos);
                     listener.onItemClick(pos);
                 }
             });

@@ -15,13 +15,15 @@ public class Model {
         }
     }
 
-    List<Student> data = new LinkedList<>();
+    List<Student> studentList = new LinkedList<>();
     public List<Student> getAllStudents(){
-        return data;
+        return studentList;
     }
     public void addStudent(Student st){
-        data.add(st);
+        studentList.add(st);
     }
 
-
+    public void deleteStudent(int pos){
+        studentList.remove(pos);
+    }
 }
