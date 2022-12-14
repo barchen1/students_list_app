@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StudentDetailsActivity">
+
+
+<ImageView
+    android:id="@+id/student_details_st_imageview"
+    android:layout_width="340dp"
+    android:layout_height="285dp"
+    android:layout_marginBottom="400dp"
+    android:background="@drawable/woman_icon"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+<TextView
+    android:id="@+id/student_details_tv_name"
+    android:layout_width="70dp"
+    android:layout_height="40dp"
+    android:layout_marginStart="56dp"
+    android:layout_marginTop="20dp"
+    android:text="Name:"
+    android:textSize="24sp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/student_details_st_imageview"
+    tools:ignore="MissingConstraints" />
+
+<TextView
+    android:id="@+id/student_details_tv_ID"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="56dp"
+    android:layout_marginTop="10dp"
+    android:text="ID:"
+    android:textSize="24sp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/student_details_tv_name" />
+
+<TextView
+    android:id="@+id/student_details_tv_phone"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="56dp"
+    android:layout_marginTop="10dp"
+    android:text="Phone:"
+    android:textSize="24sp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/student_details_tv_ID" />
+
+<TextView
+    android:id="@+id/student_details_tv_address"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="56dp"
+    android:layout_marginTop="10dp"
+    android:text="Address: "
+    android:textSize="24sp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/student_details_tv_phone" />
+
+<Button
+    android:id="@+id/student_details_back_btn"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="500dp"
+    android:layout_marginBottom="20dp"
+    android:text="Back"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.354"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.723" />
+
+<Button
+    android:id="@+id/student_details_edit_btn"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="500dp"
+    android:layout_marginBottom="20dp"
+    android:text="Edit"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.695"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.723" />
+
+<CheckBox
+    android:id="@+id/student_details_cb"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="200dp"
+    android:clickable="false"
+    android:text="Checked"
+    app:layout_constraintBottom_toTopOf="@+id/student_details_back_btn"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/student_details_st_imageview" />
+
+<TextView
+    android:id="@+id/student_details_tv_st_name"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="120dp"
+    android:layout_marginTop="25dp"
+    android:text="text"
+    android:textSize="20sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/student_details_st_imageview" />
+
+<TextView
+    android:id="@+id/student_details_tv_st_ID"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="120dp"
+    android:layout_marginTop="20dp"
+    android:text="text"
+    android:textSize="20sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/student_details_tv_st_name" />
+
+<TextView
+    android:id="@+id/student_details_tv_st_phone"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="120dp"
+    android:layout_marginTop="15dp"
+    android:text="text"
+    android:textSize="20sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/student_details_tv_st_ID" />
+
+<TextView
+    android:id="@+id/student_details_tv_st_address"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="120dp"
+    android:layout_marginTop="15dp"
+    android:text="text"
+    android:textSize="20sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/student_details_tv_st_phone" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
